@@ -1,4 +1,3 @@
-# ESP8266FlashingTools
 # Perbedaan NodeMCU dan Wemos D1 Mini
 
 ---
@@ -151,4 +150,44 @@ Secara teknis: **BISA diakses**, tapi:
 | -------------- | ---------------------- | ------------------------------- |
 | GPIO6–11       | ❌ Tidak                | Digunakan oleh flash SPI        |
 | GPIO0–5, 12–16 | ✅ Ya                   | Bisa digunakan dengan hati-hati |
-| TX/RX          | ⚠️ Ya (dengan catatan) | Dipakai untuk komunikasi serial |
+| TX/RX          | ⚠️ Ya (dengan Bagus, 
+
+---
+
+## 🧩 **Perbedaan Utama antara Wemos D1 Mini dan NodeMCU**
+
+Walaupun keduanya pakai **ESP8266** (biasanya ESP-12E/F), **perbedaan mereka bukan di chip utamanya**, melainkan di **desain papan, fitur, dan ekosistemnya**.
+
+Berikut ringkasannya:
+
+| Fitur                              | **Wemos D1 Mini**                          | **NodeMCU**                          |
+| ---------------------------------- | ------------------------------------------ | ------------------------------------ |
+| 🔍 **Ukuran Fisik**                | Kecil, ringkas                             | Lebih besar, panjang                 |
+| 🔌 **Jumlah Pin GPIO Tersedia**    | Lebih sedikit (sekitar 11 pin)             | Lebih banyak (hingga 17 pin)         |
+| 🧱 **Kompatibilitas Breadboard**   | Pas untuk **breadboard mini**              | Sulit dipasang di breadboard (lebar) |
+| 🔌 **Micro-USB Power**             | Ya                                         | Ya                                   |
+| 🧩 **Shield/Ekosistem Modular**    | Ada banyak shield resmi (relay, OLED, dsb) | Tidak punya shield resmi             |
+| ⚙️ **Kemudahan untuk Prototyping** | Modular, cocok untuk proyek kecil/modular  | Cocok untuk belajar/eksperimen umum  |
+| 💸 **Harga**                       | Sedikit lebih murah                        | Sedikit lebih mahal                  |
+| 📦 **Versi Chip ESP**              | Biasanya ESP-12F                           | Biasanya ESP-12E/F                   |
+| 🧠 **Boot Mode Behavior**          | Sama (karena chip-nya sama: ESP8266)       | Sama                                 |
+
+---
+
+## 🔧 Fokus: **Pin GPIO "Aman" Beda?**
+
+**Tidak terlalu beda.** Karena dua-duanya pakai ESP8266, perilaku pin (seperti GPIO0, GPIO2, GPIO15) **sama saja**. Yang beda hanyalah **jumlah pin yang diekspos ke header**.
+
+* **NodeMCU**: lebih banyak pin diekspos, jadi **terkesan lebih fleksibel**.
+* **Wemos D1 Mini**: lebih ringkas, tapi tetap menyisakan **cukup banyak pin aman** untuk proyek biasa.
+
+---
+
+## 🤔 Jadi, Singkatnya...
+
+| Jika kamu...                    | Pilih               |
+| ------------------------------- | ------------------- |
+| Mau bikin proyek kecil, ringkas | ✅ **Wemos D1 Mini** |
+| Mau belajar ESP8266 lebih luas  | ✅ **NodeMCU**       |
+| Butuh banyak pin GPIO           | ✅ **NodeMCU**       |
+| Mau pakai shield siap pakai     | ✅ **Wemos D1 Mini** |
